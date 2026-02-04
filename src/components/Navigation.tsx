@@ -5,6 +5,8 @@ import { Link } from "react-router";
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const toggleMenu = () => setIsOpen(!isOpen);
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#132e34]/95 backdrop-blur-sm">
       <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,7 +17,8 @@ export function Navigation() {
             </h1>
           </div>
 
-          <div className="hidden md:flex space-x-8 items-center rounded-sm">
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex space-x-8 items-center">
             <Link
               to="/"
               className="text-white hover:text-[#7a000a] transition-colors duration-300"
@@ -26,43 +29,56 @@ export function Navigation() {
               to="/aboutus"
               className="text-white hover:text-[#7a000a] transition-colors duration-300"
             >
-              about
+              About
             </Link>
-
             <a
               href="#contact"
-              className="text-white border-2 hover:bg-white hover:text-black transition-colors duration-300 border-white px-2 py-2.5"
+              className="text-white border-2 hover:bg-white hover:text-black transition-colors duration-300 border-white px-4 py-2"
             >
               Get in touch
             </a>
           </div>
 
-          <div className="md:hidden">
+          {/* Mobile Toggle Button */}
+          <div className="md:hidden z-[60]">
             <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-white hover:text-[#7a000a] transition-colors"
+              onClick={toggleMenu}
+              className="text-white hover:text-[#7a000a] transition-colors focus:outline-none"
             >
-              {isOpen ? <X size={28} /> : <Menu size={28} />}
+              {isOpen ? <X size={32} /> : <Menu size={32} />}
             </button>
           </div>
         </div>
+      </div>
 
-        {isOpen && (
-          <div className="md:hidden pb-4">
-            <Link
-              to="/"
-              className="text-white block py-2 hover:text-[#7a000a] transition-colors duration-300"
-            >
-              Home
-            </Link>
-            <Link
-              to="/aboutus"
-              className="text-white block py-2 hover:text-[#7a000a] transition-colors duration-300"
-            >
-              about
-            </Link>
-          </div>
-        )}
+      <div
+        className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#132e34]/90 backdrop-blur-md h-dvh transition-all duration-500 ease-in-out md:hidden ${
+          isOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
+        }`}
+      >
+        <div className="flex flex-col items-center space-y-8">
+          <Link
+            to="/"
+            onClick={toggleMenu}
+            className="text-white text-3xl font-semibold hover:text-[#7a000a] transition-colors"
+          >
+            Home
+          </Link>
+          <Link
+            to="/aboutus"
+            onClick={toggleMenu}
+            className="text-white text-3xl font-semibold hover:text-[#7a000a] transition-colors"
+          >
+            About
+          </Link>
+          <a
+            href="#contact"
+            onClick={toggleMenu}
+            className="text-white text-2xl border-2 border-white px-8 py-3 hover:bg-white hover:text-black transition-colors"
+          >
+            Get in touch
+          </a>
+        </div>
       </div>
     </nav>
   );
