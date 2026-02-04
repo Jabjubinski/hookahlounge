@@ -1,5 +1,5 @@
 import { MessageCircle } from "lucide-react";
-import { useState } from "react";
+
 import { motion } from "motion/react";
 import type { Variants } from "motion/react";
 
