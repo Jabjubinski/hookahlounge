@@ -21,7 +21,7 @@ export function Hero() {
             Join us
           </span>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-[1.1]">
+          <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-[1.1]">
             HP KANDELAKI <br /> BAR & <br />
             <span className="text-white/80">HOOKAH LOUNGE</span>
           </h1>
