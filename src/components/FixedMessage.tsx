@@ -4,8 +4,6 @@ import { motion } from "motion/react";
 import type { Variants } from "motion/react";
 
 const FixedMessage = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
   const buttonVariants: Variants = {
     initial: { scale: 0, opacity: 0 },
     animate: {
