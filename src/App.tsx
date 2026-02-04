@@ -6,7 +6,7 @@ import { Navigation } from "./components/Navigation";
 import { Contact } from "./components/Contact";
 import ScrollToTop from "./components/ScrollTop";
 import { DigitalMenu } from "./components/DigitalMenu";
-import FixedMessage from "./components/fixedMessage";
+import FixedMessage from "./components/FixedMessage";
 
 export default function App() {
   return (
