@@ -4,11 +4,13 @@ import Home from "./components/Home";
 import AboutUs from "./components/AboutUs";
 import { Navigation } from "./components/Navigation";
 import { Contact } from "./components/Contact";
+import ScrollToTop from "./components/ScrollTop";
 
 export default function App() {
   return (
     <ReactLenis root>
       <BrowserRouter>
+        <ScrollToTop />
         <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />
