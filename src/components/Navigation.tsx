@@ -54,16 +54,18 @@ export function Navigation() {
 
         {isOpen && (
           <div className="md:hidden pb-4">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-                className="block py-2 text-white hover:text-[#7a000a] transition-colors"
-              >
-                {link.name}
-              </a>
-            ))}
+            <Link
+              to="/"
+              className="text-white block py-2 hover:text-[#7a000a] transition-colors duration-300"
+            >
+              Home
+            </Link>
+            <Link
+              to="/aboutus"
+              className="text-white block py-2 hover:text-[#7a000a] transition-colors duration-300"
+            >
+              about
+            </Link>
           </div>
         )}
       </div>
