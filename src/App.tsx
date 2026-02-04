@@ -5,6 +5,8 @@ import AboutUs from "./components/AboutUs";
 import { Navigation } from "./components/Navigation";
 import { Contact } from "./components/Contact";
 import ScrollToTop from "./components/ScrollTop";
+import { DigitalMenu } from "./components/DigitalMenu";
+import FixedMessage from "./components/fixedMessage";
 
 export default function App() {
   return (
@@ -12,9 +14,11 @@ export default function App() {
       <BrowserRouter>
         <ScrollToTop />
         <Navigation />
+        <FixedMessage />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/menu" element={<DigitalMenu />} />
         </Routes>
         <Contact />
       </BrowserRouter>

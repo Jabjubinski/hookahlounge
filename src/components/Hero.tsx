@@ -15,13 +15,21 @@ export function Hero() {
         />
       </div>
 
-      <div className="z-10 border-[#152e32] w-[95%] h-[80%] border-[5px] flex justify-end relative">
+      <div className="z-10 border-[#152e32] w-[95%] h-[85%] md:h-[80%] border-[5px] flex justify-end relative">
+        <div className="hidden lg:flex bg-[#7a000a] absolute -bottom-10 left-10 flex-col w-80 h-64 text-3xl p-8 justify-center items-start shadow-2xl z-20">
+          <div className="flex flex-col gap-y-2 text-white font-serif italic">
+            <span>Great Hookah,</span>
+            <span>Great People,</span>
+            <span>Great Food</span>
+          </div>
+        </div>
+
         <div className="relative z-10 w-full md:w-[60%] h-full flex flex-col justify-center text-left bg-[#152e32]/85 backdrop-blur-sm px-8 md:px-16 lg:px-24">
           <span className="uppercase text-white/70 text-sm font-mono tracking-widest mb-4">
             Join us
           </span>
 
-          <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-[1.1]">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-[1.1]">
             HP KANDELAKI <br /> BAR & <br />
             <span className="text-white/80">HOOKAH LOUNGE</span>
           </h1>
@@ -31,7 +39,7 @@ export function Hero() {
               Premium Hookah • Craft Cocktails • Refined Atmosphere
             </p>
             <p className="text-[#7a000a] font-bold text-xl md:text-2xl">
-              <span>(+995) 596 844 884</span>
+              (+995) 596 844 884
             </p>
           </div>
 

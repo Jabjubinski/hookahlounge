@@ -16,7 +16,7 @@ const AboutUs = () => {
         </div>
         <div className="relative z-10 text-center px-6">
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold uppercase leading-[0.9] tracking-tighter">
-            About <br /> Kandelaki
+            About <br /> Kandelaki <span className="text-[#7a000a] italic">Lounge</span>
           </h1>
         </div>
       </section>

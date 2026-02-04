@@ -1,21 +1,21 @@
-import { MapPin, Phone, Clock, Instagram, Facebook } from 'lucide-react';
+import { MapPin, Phone, Clock, Instagram, Facebook } from "lucide-react";
 
 export function Contact() {
   const contactInfo = [
     {
       icon: MapPin,
-      title: 'Location',
-      content: '123 Lounge Street, Downtown',
+      title: "Location",
+      content: "123 Lounge Street, Downtown",
     },
     {
       icon: Phone,
-      title: 'Phone',
-      content: '+1 (555) 123-4567',
+      title: "Phone",
+      content: "+1 (555) 123-4567",
     },
     {
       icon: Clock,
-      title: 'Hours',
-      content: 'Mon-Sun: 6PM - 2AM',
+      title: "Hours",
+      content: "Mon-Sun: 6PM - 2AM",
     },
   ];
 
@@ -33,7 +33,7 @@ export function Contact() {
                 const Icon = info.icon;
                 return (
                   <div key={index} className="flex items-start space-x-4">
-                    <div className="flex-shrink-0">
+                    <div className="shrink-0">
                       <Icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -49,7 +49,9 @@ export function Contact() {
 
             {/* Social Media */}
             <div>
-              <h3 className="text-lg font-semibold text-white mb-4">Follow Us</h3>
+              <h3 className="text-lg font-semibold text-white mb-4">
+                Follow Us
+              </h3>
               <div className="flex space-x-4">
                 <a
                   href="#"
